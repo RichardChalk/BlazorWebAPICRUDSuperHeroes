@@ -12,7 +12,7 @@ namespace SuperHeroes.Shared
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;
         public string HeroName { get; set; } = string.Empty;
-        public Comic? Comic { get; set; } // Can be null
+        public Comic? Comic { get; set; } // Can be value null
         public int ComicId { get; set; }
     }
 }
