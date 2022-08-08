@@ -6,7 +6,7 @@ namespace SuperHeroes.Server.Controllers
 {
     [Route("api/[controller]")] // eg. https://localhost:7067/api/SuperHeroes
     [ApiController]
-    public class SuperHeroesController : ControllerBase
+    public class SuperHeroController : ControllerBase
     {
         public static List<Comic> Comics = new List<Comic>
         {
