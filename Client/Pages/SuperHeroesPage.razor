@@ -1,11 +1,12 @@
-﻿@page "/superheroes"
+﻿@page "/superheroespage"
+
 @inject ISuperHeroService SuperHeroService
 
 <PageTitle>Superheroes</PageTitle>
 
 <h3>Superheroes</h3>
 
-<table>
+<table class="table table-striped mt-5">
     <thead>
         <tr>
             <th>Firstname</th>
@@ -15,14 +16,26 @@
         </tr>
     </thead>
     <tbody>
-
+        @foreach (var hero in SuperHeroService.Heroes)
+        {
+        <tr>
+            <td>@hero.FirstName</td>
+            <td>@hero.LastName</td>
+            <td>@hero.HeroName</td>
+            <td>@hero.Comic.Name</td>
+        </tr>
+        }
     </tbody>
-
-
-
-
 </table>
 
-@code {
+@code {      
+    protected override async Task OnInitializedAsync()
+    {
+        await SuperHeroService.GetSuperHeroes();
+    }
+
+
+
+
 
 }
