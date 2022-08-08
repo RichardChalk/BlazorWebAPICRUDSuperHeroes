@@ -1,3 +1,7 @@
+// added this as global using to save a few lines :)
+global using SuperHeroes.Shared;
+
+
 using Microsoft.AspNetCore.ResponseCompression;
 
 var builder = WebApplication.CreateBuilder(args);
