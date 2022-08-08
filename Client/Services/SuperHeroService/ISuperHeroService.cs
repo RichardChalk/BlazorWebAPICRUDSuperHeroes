@@ -6,6 +6,6 @@
         List<Comic> Comics { get; set; }
         Task GetComics();
         Task GetSuperHeroes();
-        Task GetSingleSuperHero(int id);
+        Task<SuperHero> GetSingleSuperHero(int id);
     }
 }
