@@ -1,7 +1,10 @@
+global using SuperHeroes.Client.Services.SuperHeroService;
+global using SuperHeroes.Shared;
+
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using SuperHeroes.Client;
-using SuperHeroes.Client.Services.SuperHeroService;
+
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
