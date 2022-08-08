@@ -31,5 +31,19 @@ namespace SuperHeroes.Server.Controllers
                 Comic = Comics[1]
             },
         };
+
+        //  READ -  READ -  READ -  READ -  READ -  READ -  READ -  READ -  READ
+        //  READ -  READ -  READ -  READ -  READ -  READ -  READ -  READ -  READ
+        //  READ -  READ -  READ -  READ -  READ -  READ -  READ -  READ -  READ
+        //  READ -  READ -  READ -  READ -  READ -  READ -  READ -  READ -  READ
+        [HttpGet]
+
+        // Returning an ActionResult means we can also return a status code 
+        // as well as our heroes
+        public async Task<ActionResult<List<SuperHero>>> GetSuperHeroes()
+        {
+            return Ok(Heroes);
+        }
+
     }
 }
